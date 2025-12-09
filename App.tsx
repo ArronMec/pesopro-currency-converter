@@ -76,8 +76,10 @@ const App: React.FC = () => {
     <div className="flex flex-col min-h-[100dvh] bg-slate-950 text-slate-100">
       <main className="flex-grow flex flex-col items-center px-4 pb-6 w-full max-w-md mx-auto gap-6">
           
-          {/* Privacy Policy and Terms of Service Links - Top of Page */}
+          {/* Home, Privacy Policy and Terms of Service Links - Top of Page */}
           <div className="flex items-center justify-center gap-4 pt-6 pb-4 w-full">
+            <span className="text-sm text-slate-400 font-medium">Home</span>
+            <span className="text-slate-500">•</span>
             <a 
               href="https://pesopro-curreny-converter.vercel.app/privacy-policy.html"
               target="_blank"
