@@ -76,6 +76,27 @@ const App: React.FC = () => {
     <div className="flex flex-col min-h-[100dvh] bg-slate-950 text-slate-100">
       <main className="flex-grow flex flex-col items-center px-4 pb-6 w-full max-w-md mx-auto gap-6">
           
+          {/* Privacy Policy and Terms of Service Links - Top of Page */}
+          <div className="flex items-center justify-center gap-4 pt-4 pb-2 w-full">
+            <a 
+              href="https://pesopro-curreny-converter.vercel.app/privacy-policy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-400 hover:text-slate-300 transition-colors underline underline-offset-2"
+            >
+              Privacy Policy
+            </a>
+            <span className="text-slate-600">•</span>
+            <a 
+              href="https://pesopro-curreny-converter.vercel.app/terms-of-service.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-400 hover:text-slate-300 transition-colors underline underline-offset-2"
+            >
+              Terms of Service
+            </a>
+          </div>
+
           {/* Main Converter Card */}
           <div className="w-full flex-none">
             {loading || !state.rate ? (
@@ -105,31 +126,10 @@ const App: React.FC = () => {
               <div className="w-full space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
                   <CurrencyChart currentRate={state.rate} />
                   
-                  <div className="text-center pb-4">
+                  <div className="text-center pb-8">
                      <p className="text-[10px] text-slate-600">
                         Last Updated: {state.lastUpdated ? new Date(state.lastUpdated).toLocaleString() : '...'}
                      </p>
-                  </div>
-
-                  {/* Privacy Policy and Terms of Service Links */}
-                  <div className="flex items-center justify-center gap-4 pt-4 pb-8 border-t border-slate-800">
-                    <a 
-                      href="https://pesopro-curreny-converter.vercel.app/privacy-policy.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-slate-400 hover:text-slate-300 transition-colors underline underline-offset-2"
-                    >
-                      Privacy Policy
-                    </a>
-                    <span className="text-slate-600">•</span>
-                    <a 
-                      href="https://pesopro-curreny-converter.vercel.app/terms-of-service.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-slate-400 hover:text-slate-300 transition-colors underline underline-offset-2"
-                    >
-                      Terms of Service
-                    </a>
                   </div>
               </div>
           )}
