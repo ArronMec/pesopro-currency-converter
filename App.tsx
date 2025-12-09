@@ -77,21 +77,21 @@ const App: React.FC = () => {
       <main className="flex-grow flex flex-col items-center px-4 pb-6 w-full max-w-md mx-auto gap-6">
           
           {/* Privacy Policy and Terms of Service Links - Top of Page */}
-          <div className="flex items-center justify-center gap-4 pt-4 pb-2 w-full">
+          <div className="flex items-center justify-center gap-4 pt-6 pb-4 w-full">
             <a 
               href="https://pesopro-curreny-converter.vercel.app/privacy-policy.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-slate-400 hover:text-slate-300 transition-colors underline underline-offset-2"
+              className="text-sm text-slate-300 hover:text-white transition-colors underline underline-offset-2 font-medium"
             >
               Privacy Policy
             </a>
-            <span className="text-slate-600">•</span>
+            <span className="text-slate-500">•</span>
             <a 
               href="https://pesopro-curreny-converter.vercel.app/terms-of-service.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-slate-400 hover:text-slate-300 transition-colors underline underline-offset-2"
+              className="text-sm text-slate-300 hover:text-white transition-colors underline underline-offset-2 font-medium"
             >
               Terms of Service
             </a>
