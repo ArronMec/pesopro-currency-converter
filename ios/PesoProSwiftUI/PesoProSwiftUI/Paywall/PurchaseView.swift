@@ -356,16 +356,12 @@ struct PurchaseView: View {
                             ActionSheet(title: Text("View Terms & Conditions"), message: nil,
                                         buttons: [
                                             .default(Text("Terms of Use"), action: {
-                                                // TODO: Replace with your Vercel URL after deployment
-                                                // Example: https://your-project-name.vercel.app/terms-of-service.html
-                                                if let url = URL(string: "https://your-project-name.vercel.app/terms-of-service.html") {
+                                                if let url = URL(string: "https://pesopro-curreny-converter.vercel.app/terms-of-service.html") {
                                                     UIApplication.shared.open(url)
                                                 }
                                             }),
                                             .default(Text("Privacy Policy"), action: {
-                                                // TODO: Replace with your Vercel URL after deployment
-                                                // Example: https://your-project-name.vercel.app/privacy-policy.html
-                                                if let url = URL(string: "https://your-project-name.vercel.app/privacy-policy.html") {
+                                                if let url = URL(string: "https://pesopro-curreny-converter.vercel.app/privacy-policy.html") {
                                                     UIApplication.shared.open(url)
                                                 }
                                             }),
