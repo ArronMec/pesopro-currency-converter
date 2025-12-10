@@ -98,13 +98,6 @@ const App: React.FC = () => {
             </a>
           </nav>
 
-          {/* Welcome Message */}
-          <div className="w-full text-center py-4">
-            <h1 className="text-2xl font-semibold text-white px-4" style={{ color: '#ffffff', display: 'block' }}>
-              Welcome to Pesos to Dollar Currency Converter
-            </h1>
-          </div>
-
           {/* Main Converter Card */}
           <div className="w-full flex-none">
             {loading || !state.rate ? (
