@@ -4,7 +4,6 @@ import { ConversionState } from './types';
 import { Converter } from './components/Converter';
 import { CurrencyChart } from './components/CurrencyChart';
 import { ArrowDown } from 'lucide-react';
-import { Onboarding } from './components/Onboarding';
 
 const App: React.FC = () => {
   const [state, setState] = useState<ConversionState>({
@@ -16,7 +15,6 @@ const App: React.FC = () => {
   });
   const [loading, setLoading] = useState(true);
   const [showDetails, setShowDetails] = useState(false);
-  const [showOnboarding, setShowOnboarding] = useState(true);
 
   const init = useCallback(async () => {
     setLoading(true);
@@ -54,25 +52,9 @@ const App: React.FC = () => {
     init();
   }, [init]);
 
-  useEffect(() => {
-    // Check if user has already completed onboarding
-    const seen = localStorage.getItem('pesoPro_onboarding_seen');
-    if (seen === 'true') {
-      setShowOnboarding(false);
-    }
-  }, []);
-
-  const handleCompleteOnboarding = () => {
-    // Mark onboarding as completed
-    localStorage.setItem('pesoPro_onboarding_seen', 'true');
-    setShowOnboarding(false);
-  };
+  // Onboarding disabled for web version
 
   return (
-    <>
-      {showOnboarding ? (
-        <Onboarding onContinue={handleCompleteOnboarding} />
-      ) : (
     <div className="flex flex-col min-h-[100dvh] bg-slate-950 text-slate-100">
       <main className="flex-grow flex flex-col items-center px-4 pb-6 w-full max-w-md mx-auto gap-6">
           
@@ -137,8 +119,6 @@ const App: React.FC = () => {
 
       </main>
     </div>
-      )}
-    </>
   );
 };
 
