@@ -80,7 +80,7 @@ const App: React.FC = () => {
       {/* Header */}
       <header className="w-full bg-slate-950 border-b border-slate-800">
         <div className="max-w-md mx-auto px-4 py-4">
-          <h1 className="text-2xl font-bold text-white text-center">Pesos to Dollar Converter</h1>
+          <h1 className="text-2xl font-bold text-white text-center">Pesos to Dollar Currency Converter</h1>
         </div>
       </header>
 
